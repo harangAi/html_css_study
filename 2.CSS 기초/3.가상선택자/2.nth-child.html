@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits li:first-child {
+            color: red;
+        }
+        #fruits li:last-child {
+            color: yellowgreen;
+        }
+        #fruits li:nth-child(5) {
+            color: rgb(200, 200, 2);
+        }
+        /* 짝수: 2n, even */
+        #fruits li:nth-child(even) {
+            background: grey;
+        }
+        /* 홀수: 2n+1, odd */
+        #fruits li:nth-child(odd) {
+            background: aqua;
+        }
+        /* li중에 1, 4, 7번째 요소에 italic적용 */
+        #fruits li:nth-child(3n+1) {
+            font-style: italic;
+        }
+        .food p:nth-child(2) {
+            font-size: 1.5em;
+        }
+        #fruits li:not(.orange) {
+            /* li태그의 앞에 점 제거 */
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul#fruits>li*7 -->
+    <ul id="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>자몽</li>
+        <li>라임</li>
+    </ul>
+    <!-- .food>div+p*2+span -->
+    <div class="food">
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>짬뽕</p>
+        <span>탕수육</span>
+    </div>
+</body>
+</html>
