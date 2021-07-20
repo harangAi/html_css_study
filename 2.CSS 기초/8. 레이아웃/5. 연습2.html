@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .gnb {
+            margin: 0 auto;
+            width: 70%;
+        }
+        .gnb li {
+            width: 18%;
+            margin: 0 1%;
+            padding-bottom: 12px;
+            float: left;
+            font-size: 35px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .gnb li:hover {
+            border-bottom: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="gnb clearfix">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BOARD</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
