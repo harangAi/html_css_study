@@ -1,61 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
         .root {
-            width: 400px;
-            height: 300px;
+            position: relative;
+            width: 600px;
+            height: 500px;
             border: 4px dashed orange;
             padding: 100px;
-            /* position: 아무거나 걸면 abs가 이 안에서만 움직임*/
-            position: relative;
+            font-size: 30px;
         }
         .parent {
+            position: relative;
             width: 400px;
             height: 300px;
             border: 4px dashed blue;
-            /* 가장 가까운 부모에게 걸린 posirion에 따라 움직임 */
-            position: relative;
+            padding: 50px;
         }
         .child {
             width: 120px;
             height: 80px;
-            background: tomato;
             border: 4px dashed red;
-            font-size: 30px;
+            background: tomato;
             border-radius: 10px;
         }
         .abs {
             position: absolute;
-            top: 10px;
-            /* 기준점 밖으로 내보낼수도 있음 */
-            right: -30px; 
+            top: 20px;
+            right: 30px;
         }
-
-        /* 박스 상하좌우 정중앙 배치(실무에서 많이쓰이는 공식.그냥외우기) */
+        /* absolute를 이용한 박스 정중앙 배치 */
         .center-box {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
         }
+        .circle {
+            width: 300px;
+            height: 300px;
+            background: aqua;
+            /* 원 */
+            border-radius: 50%;
+        }
     </style>
-
 </head>
 <body>
-    
-    <div class="root">
-        <div class="parent">
-            <div class="child center-box">1</div>
-            <div class="child abs">2</div>
-            <div class="child">3</div>
+    <div class="circle center-box"></div>
+    <div class="root">ROOT
+        <div class="parent">PARENT
+            <div class="child abs">1</div>
+            <div class="child">2</div>
+            <div class="child center-box">3</div>
         </div>
     </div>
-
 </body>
 </html>

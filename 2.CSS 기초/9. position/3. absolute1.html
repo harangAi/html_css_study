@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
         .box {
             width: 100px;
@@ -14,23 +13,17 @@
             border: 4px dashed orange;
             font-size: 30px;
         }
-
-        /* 3번이 2번자리를 침범(2번이 absolute 걸면 붕떠버려서(앞으로 나감) 3번이 그자리로 올라가서 2번 뒤에 숨어있음) */
         .box:nth-child(2) {
-            position: absolute;
-            left: 30px;
-            top: 0;
+            position: relative;
+            right: 10px;
+            top: 20px;
            
         }
-
     </style>
-
 </head>
 <body>
-    
     <div class="box">1</div>
     <div class="box">2</div>
     <div class="box">3</div>
-
 </body>
 </html>
